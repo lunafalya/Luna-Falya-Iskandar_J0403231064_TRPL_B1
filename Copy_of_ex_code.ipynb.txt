@@ -1,0 +1,755 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "def fun():\n",
+        "  print(\"my fun function\")\n",
+        "\n",
+        "fun()"
+      ],
+      "metadata": {
+        "id": "adBX1DCVCuCa",
+        "outputId": "c8b580b0-ca1c-4179-f9dd-effbf45e4125",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "my fun function\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def sum (a,b):\n",
+        "  print (a+b)\n",
+        "\n",
+        "sum(1,2)"
+      ],
+      "metadata": {
+        "id": "avku2V5wD5jk",
+        "outputId": "17742f0f-9a09-4396-a043-dfbc410080a5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet(name,greeting):\n",
+        "  print (f\"{greeting},{name}!\")\n",
+        "\n",
+        "greet (\"alice\",\"Hello\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5rmCqCvzEcId",
+        "outputId": "4fb8312e-662f-4ec2-bf30-28bd214e606b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello,alice!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet(name,greeting):\n",
+        "  print (f\"{greeting},{name}!\")\n",
+        "\n",
+        "greet (greeting=\"hi\",name=\"bob\")"
+      ],
+      "metadata": {
+        "id": "sTlEPZTAE-1w",
+        "outputId": "2c9633e8-6323-4945-9a95-852d3287fe59",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hi,bob!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet(name,greeting=\"hello\"):\n",
+        "  print (f\"{greeting},{name}!\")\n",
+        "\n",
+        "greet (\"eve\")"
+      ],
+      "metadata": {
+        "id": "C41KD7V4FYfI",
+        "outputId": "5125483b-d8ef-4ac9-90f6-778c3366f8b5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello,eve!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def print_args(*args):\n",
+        "  for arg in args:\n",
+        "    print (arg)\n",
+        "\n",
+        "print_args(1,\"apple\",True)"
+      ],
+      "metadata": {
+        "id": "ztWTmbktF1rx",
+        "outputId": "8043107c-0976-4ab0-9763-a40bdb68c74a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "apple\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def print_kwargs(**kwargs):\n",
+        "  for key,value in kwargs.items():\n",
+        "    print(f\"{key}:{value}\")\n",
+        "\n",
+        "print_kwargs(name=\"alice\",age=30)"
+      ],
+      "metadata": {
+        "id": "X98FhJUrGOo-",
+        "outputId": "7abd9a92-1a1f-4376-9f5c-a49c0bb6cc95",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "name:alice\n",
+            "age:30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def print_list(numbers):\n",
+        "  for num in numbers :\n",
+        "    print(num)\n",
+        "\n",
+        "print_list([1,2,3,4])"
+      ],
+      "metadata": {
+        "id": "JJ591sQOHPVL",
+        "outputId": "c989879b-d34a-4e11-9ee3-2c569cc07581",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def print_dict(my_dict):\n",
+        "  for key, value in my_dict.items():\n",
+        "    print(f\"{key}:{value}\")\n",
+        "\n",
+        "print_dict({\"name\":\"bob\",\"age\":25})"
+      ],
+      "metadata": {
+        "id": "IwV_GQ27H3Fd",
+        "outputId": "f250595c-e52c-41f7-ac52-3dbf2bc1496a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "name:bob\n",
+            "age:25\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def f(a,*b,c=6,**d):\n",
+        "  print(f\"a:{a}\")\n",
+        "  print(f\"b:{b}\")\n",
+        "  print(f\"c:{c}\")\n",
+        "  print(f\"d:{d}\")\n",
+        "\n",
+        "  f(1,2,3,x=4,y=5)\n",
+        "  f(1,2,3,c=7,x=4,y=5)"
+      ],
+      "metadata": {
+        "id": "utLCqQo7IefQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet(name):\n",
+        "  \"\"\"This function greets theperson passed in as a parameter.\"\"\"\n",
+        "  print(f\"Hello,{name}!\")\n",
+        "\n",
+        "greet(\"alice\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NG_45ifQReNh",
+        "outputId": "f34cf139-4a54-4d8e-b721-8f55eca5d0eb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello,alice!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def say_hello():\n",
+        "  print(\"hello,world!\")\n",
+        "\n",
+        "greeting= say_hello\n",
+        "greeting()\n",
+        "\n",
+        "def say_hello():\n",
+        "  print(\"hello,python!\")\n",
+        "\n",
+        "say_hello()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_eDYIPs_R99E",
+        "outputId": "2c20936f-c33a-4a95-942a-001869d7eaa1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello,world!\n",
+            "hello,python!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def divide_by_zero(a):\n",
+        "  return a*2/(a-a)\n",
+        "\n",
+        "print(\"after function creation\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eZ-9D-n7SXWX",
+        "outputId": "0c347340-5744-4e46-b563-ea9e3fc7bd65"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "after function creation\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def divide_by_zero(a) :\n",
+        "  return a*2/(a-a)\n",
+        "\n",
+        "print(\"after function is called/executed\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HUWPOI8dTQ5i",
+        "outputId": "483cba6d-de0a-422a-cf06-cf3b98fc70f4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "after function is called/executed\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet(name):\n",
+        "  return f\"hello,{name}!\"\n",
+        "\n",
+        "my_function = greet\n",
+        "\n",
+        "result = my_function(\"alice\")\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hxHVHQ8wY2jy",
+        "outputId": "62875c84-8179-4ff2-b5bf-b710232b08e5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello,alice!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def apply(func,x):\n",
+        "  return func(x)\n",
+        "\n",
+        "def square (x):\n",
+        "  return x*x\n",
+        "\n",
+        "result = apply(square,5)\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y8GHznncZPA_",
+        "outputId": "48018087-ae50-41eb-f015-6264daf8f752"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "25\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_multiplier(factor):\n",
+        "  def multiplier(x):\n",
+        "    return x*factor\n",
+        "  return multiplier\n",
+        "\n",
+        "double = get_multiplier(2)\n",
+        "triple = get_multiplier(3)\n",
+        "\n",
+        "print(double(5))\n",
+        "print(triple(5))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v8H8dNXwZiL-",
+        "outputId": "ed08ecf9-9793-45e2-d65f-a7722c9e593c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def my_function():\n",
+        "  x=10\n",
+        "  print(x)\n",
+        "\n",
+        "def outer_function():\n",
+        "  y=20\n",
+        "  def inner_function():\n",
+        "    print(y)\n",
+        "\n",
+        "z= 30\n",
+        "def another_function():\n",
+        "  print(z)\n",
+        "\n",
+        "print(len(\"hello,world!\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uwixOMgyZ_WN",
+        "outputId": "bc59cd53-28d7-4265-ecc7-22112349f0ec"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "12\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "global_var = 10\n",
+        "\n",
+        "def modify_global():\n",
+        "  global global_var\n",
+        "  global_var = 20\n",
+        "\n",
+        "modify_global()\n",
+        "print(global_var)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_33jUTQna0TX",
+        "outputId": "d76a2148-6bd4-4404-bee0-dbe2941c98b4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def modify_list(my_list):\n",
+        "  my_list.append(4)\n",
+        "\n",
+        "my_list = [1,2,3]\n",
+        "modify_list(my_list)\n",
+        "print(my_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CBSjY8KEbTHQ",
+        "outputId": "bc4baab3-37ff-48d1-87f4-70fddab99126"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def reassign_list(my_list):\n",
+        "  my_list = [4,5,6]\n",
+        "\n",
+        "my_list = [1,2,3]\n",
+        "reassign_list(my_list)\n",
+        "print(my_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v1s1aM4mb5Ue",
+        "outputId": "ec0ce560-91a3-442b-b8af-f0727a1afd5e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def modify_integer(x):\n",
+        "  x+=1\n",
+        "\n",
+        "my_integer = 5\n",
+        "modify_integer(my_integer)\n",
+        "print(my_integer)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "umpJguKNcOhi",
+        "outputId": "029fd1f7-07ab-49e5-a5b5-20cadadc0b62"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def product(a, b):\n",
+        " print(a * b)\n",
+        "def product(a, b, c):\n",
+        " print(a * b * c)\n",
+        "# product(4, 5)\n",
+        "# Uncommenting this shows an error\n",
+        "\n",
+        "product(4, 5, 5) # This line will call the last function\n",
+        "# Try using *args to solve that problem"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q4B9JPQNceuT",
+        "outputId": "a12fb0c2-8349-4051-8132-e18a2f44f646"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def factorial(n):\n",
+        " if n == 0:\n",
+        "    return 1\n",
+        " else:\n",
+        "    return n * factorial(n - 1)\n",
+        "result = factorial(5)\n",
+        "print(result) # Output: 120"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pT9teiAndD8M",
+        "outputId": "09fb9ec4-eca1-4db6-cd87-5899d0098132"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "120\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def add(a, b):\n",
+        " \"\"\"\n",
+        " This function adds two numbers together.\n",
+        "\n",
+        " Args:\n",
+        " a (int): The first number to be added.\n",
+        " b (int): The second number to be added.\n",
+        "\n",
+        " Returns:\n",
+        " int: The sum of the two input numbers.\n",
+        "\n",
+        " Example:\n",
+        " >>> add(3, 4)\n",
+        " 7\n",
+        " \"\"\"\n",
+        " return a + b\n",
+        "help(add) # Displays the docstring"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kDFxFjyDdWRt",
+        "outputId": "ae3ff691-a9c1-42aa-d697-5d86c2e9c293"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Help on function add in module __main__:\n",
+            "\n",
+            "add(a, b)\n",
+            "    This function adds two numbers together.\n",
+            "    \n",
+            "    Args:\n",
+            "    a (int): The first number to be added.\n",
+            "    b (int): The second number to be added.\n",
+            "    \n",
+            "    Returns:\n",
+            "    int: The sum of the two input numbers.\n",
+            "    \n",
+            "    Example:\n",
+            "    >>> add(3, 4)\n",
+            "    7\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "rhGdn4iTddDb"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
