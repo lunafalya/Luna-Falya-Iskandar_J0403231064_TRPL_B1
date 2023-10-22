@@ -1,0 +1,110 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "def celsius_to_fahrenheit(celsius):\n",
+        "    \"\"\"Mengonversi suhu dari Celsius ke Fahrenheit.\"\"\"\n",
+        "    fahrenheit = (celsius * 9/5) + 32\n",
+        "    return fahrenheit\n",
+        "\n",
+        "def fahrenheit_to_celsius(fahrenheit):\n",
+        "    \"\"\"Mengonversi suhu dari Fahrenheit ke Celsius.\"\"\"\n",
+        "    celsius = (fahrenheit - 32) * 5/9\n",
+        "    return celsius\n",
+        "\n",
+        "# Contoh penggunaan\n",
+        "celsius_temperature = 25\n",
+        "fahrenheit_temperature = celsius_to_fahrenheit(celsius_temperature)\n",
+        "print(f\"{celsius_temperature} derajat Celsius sama dengan {fahrenheit_temperature} derajat Fahrenheit\")\n",
+        "\n",
+        "fahrenheit_temperature = 77\n",
+        "celsius_temperature = fahrenheit_to_celsius(fahrenheit_temperature)\n",
+        "print(f\"{fahrenheit_temperature} derajat Fahrenheit sama dengan {celsius_temperature} derajat Celsius\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sazLmkNFo80n",
+        "outputId": "43c854f0-1177-4b7f-ba89-da914f86d4e8"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "25 derajat Celsius sama dengan 77.0 derajat Fahrenheit\n",
+            "77 derajat Fahrenheit sama dengan 25.0 derajat Celsius\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def perform_operation(operator, *args):\n",
+        "    \"\"\"\n",
+        "    Perform arithmetic operations on a variable number of arguments.\n",
+        "\n",
+        "    Args:\n",
+        "        operator (str): The operator to perform the operation ('+', '-', '*', '/').\n",
+        "        *args (float): Variable number of arguments on which the operation is to be performed.\n",
+        "\n",
+        "    Returns:\n",
+        "        float: The result of the arithmetic operation.\n",
+        "\n",
+        "    Raises:\n",
+        "        ValueError: If an invalid operator is provided.\n",
+        "\n",
+        "    Examples:\n",
+        "        >>> perform_operation('+', 2, 3, 4)\n",
+        "        9\n",
+        "        >>> perform_operation('-', 10, 5, 3)\n",
+        "        2\n",
+        "        >>> perform_operation('*', 2, 3, 5)\n",
+        "        30\n",
+        "        >>> perform_operation('/', 12, 3, 2)\n",
+        "        2.0\n",
+        "    \"\"\"\n",
+        "    if operator not in ('+', '-', '*', '/'):\n",
+        "        raise ValueError(\"Invalid operator. Use '+', '-', '*', or '/'.\")\n",
+        "\n",
+        "    result = args[0]\n",
+        "    for number in args[1:]:\n",
+        "        if operator == '+':\n",
+        "            result += number\n",
+        "        elif operator == '-':\n",
+        "            result -= number\n",
+        "        elif operator == '*':\n",
+        "            result *= number\n",
+        "        elif operator == '/':\n",
+        "            if number == 0:\n",
+        "                raise ValueError(\"Division by zero is not allowed.\")\n",
+        "            result /= number\n",
+        "\n",
+        "    return result\n"
+      ],
+      "metadata": {
+        "id": "JpXcuCgEpbf3"
+      },
+      "execution_count": 4,
+      "outputs": []
+    }
+  ]
+}
