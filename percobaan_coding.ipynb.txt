@@ -1,0 +1,642 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pOk7tDiqjeCE",
+        "outputId": "62e6ebd3-7c22-4a97-c5c9-1dd6de695954"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The type of [] is: <class 'list'>\n",
+            "The type of [1, 2.4, 'abc', (1, 2), [6, 78, 9]] is: <class 'list'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "list1=[] # creating an empty list\n",
+        "list2=[1,2.4,'abc',(1,2),[6,78,9]] # creating a list of different values\n",
+        "print(\"The type of\",list1,\"is:\",type(list1))\n",
+        "print(\"The type of\",list2,\"is:\",type(list2))\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_1=[1,3,5.6,'a',\"PythonGeeks\",0.4]\n",
+        "print(list_1[3]) # accessing the 4th element\n",
+        "print(list_1) # accessing the whole list\n",
+        "print(list_1[-2]) # printing the last 2nd element\n"
+      ],
+      "metadata": {
+        "id": "eIvZ-lVJkTIT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_1=[1,3,5.6,'a',\"PythonGeeks\",0.4]\n",
+        "print(\"list_1[2:5] =\",list_1[2:5]) # slicing 3rd to 5th element\n",
+        "print(\"list_1[:] =\",list_1[:]) # getting entire list\n",
+        "print(\"list_1[-5:-2] =\",list_1[-5:-2]) # slicing last 5th to 3rd element\n",
+        "print(\"list_1[3:] =\",list_1[3:]) # slicing all elements after 3rd one\n",
+        "print(\"list_1[-3:] =\",list_1[-3:]) # slicing all elements after last 3rd one\n",
+        "print(\"list_1[:2] =\",list_1[:2]) # slicing all elements till 2nd one\n",
+        "print(\"list_1[:-2] =\",list_1[:-2])# slicing all elements till last 2nd one\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4gu38O4Skhlt",
+        "outputId": "cc0edc5c-2b84-4946-db55-bb7f5dbd277e"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "list_1[2:5] = [5.6, 'a', 'PythonGeeks']\n",
+            "list_1[:] = [1, 3, 5.6, 'a', 'PythonGeeks', 0.4]\n",
+            "list_1[-5:-2] = [3, 5.6, 'a']\n",
+            "list_1[3:] = ['a', 'PythonGeeks', 0.4]\n",
+            "list_1[-3:] = ['a', 'PythonGeeks', 0.4]\n",
+            "list_1[:2] = [1, 3]\n",
+            "list_1[:-2] = [1, 3, 5.6, 'a']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Sample 1:\n",
+        "list1=[1,-2,3,-4,5]\n",
+        "list2=[x**2 for x in list1]\n",
+        "print(list2)\n",
+        "\n",
+        "# Sample 2 (with condition):\n",
+        "fruits = [\"apple\", \"banana\", \"cherry\", \"kiwi\", \"mango\"]\n",
+        "newlist = [x if x != \"banana\" else \"orange\" for x in fruits]\n",
+        "print(newlist)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HsBZrcHakimc",
+        "outputId": "51609d80-75f1-4d8b-acb1-2451df087577"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16, 25]\n",
+            "['apple', 'orange', 'cherry', 'kiwi', 'mango']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "emp_info=['Python',5,'Developer']\n",
+        "\n",
+        "#List unpacking\n",
+        "skill,exp,role=emp_info\n",
+        "print (skill)\t#Output:Python\n",
+        "print (exp)\t#Output:5\n",
+        "print (role)\t#Output:Developer\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y5mU1v4okrYq",
+        "outputId": "9b1d7d88-cbf2-4c44-a513-da4fe26d08af"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Python\n",
+            "5\n",
+            "Developer\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup=(9,6,'g','Python',7.4)\n",
+        "print(len(tup))\n",
+        "print(tup.index('g'))\n",
+        "\n",
+        "print(tup.count('a'))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lnKqnYvRk-Gk",
+        "outputId": "e2f68d7a-0d0e-4728-d898-2a9e06011092"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "2\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Create a tuple using round brackets\n",
+        "t1 = (1, 2, 3, 4)\n",
+        "\n",
+        "# Create a tuple from a list the tuple() constructor\n",
+        "t2 = tuple([1, 2, 3, 4, 5])\n",
+        "\n",
+        "# Create a tuple using the tuple() constructor\n",
+        "t3 = tuple([1, 2, 3, 4, 5, 6])\n",
+        "\n",
+        "# Print out tuples\n",
+        "print(f\"Tuple t1: {t1}\")\n",
+        "print(f\"Tuple t2: {t2}\")\n",
+        "print(f\"Tuple t3: {t3}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_b9eaXOJk-75",
+        "outputId": "0f33d83b-4510-40d7-b077-ef0ae8d849d7"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Tuple t1: (1, 2, 3, 4)\n",
+            "Tuple t2: (1, 2, 3, 4, 5)\n",
+            "Tuple t3: (1, 2, 3, 4, 5, 6)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup1 = ('physics', 'chemistry', 1997, 2000);\n",
+        "tup2 = (1, 2, 3, 4, 5, 6, 7 );\n",
+        "print (\"tup1[0]: \", tup1[0])\n",
+        "print (\"tup2[1:5]: \", tup2[1:5])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D76jPAmWlDNY",
+        "outputId": "8d393f17-f460-4316-a92a-511cf9028b96"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "tup1[0]:  physics\n",
+            "tup2[1:5]:  (2, 3, 4, 5)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup1 = (12, 34.56);\n",
+        "tup2 = ('abc', 'xyz');\n",
+        "\n",
+        "# Following action is NOT VALID for tuples\n",
+        "# tup1[0] = 100;\n",
+        "\n",
+        "# So let's create a new tuple as follows\n",
+        "tup3 = tup1 + tup2;\n",
+        "print (tup3);\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eYkG4SZElHU_",
+        "outputId": "6a51f58f-9fe7-4222-9874-bf58f8b29685"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(12, 34.56, 'abc', 'xyz')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup = ('physics', 'chemistry', 1997, 2000);\n",
+        "print (tup);\n",
+        "del tup;\n",
+        "print (\"After deleting tup : \");\n",
+        "print (tup);\t# an exception raised, because after del tup tuple does not exist anymore\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 298
+        },
+        "id": "FnK-uGtXlJ8u",
+        "outputId": "9189c2fe-9e9a-4cc3-dea8-7c28742c30bd"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "('physics', 'chemistry', 1997, 2000)\n",
+            "After deleting tup : \n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-10-6efd75d4607b>\u001b[0m in \u001b[0;36m<cell line: 5>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;32mdel\u001b[0m \u001b[0mtup\u001b[0m\u001b[0;34m;\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0mprint\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;34m\"After deleting tup : \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m;\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 5\u001b[0;31m \u001b[0mprint\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mtup\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m;\u001b[0m    \u001b[0;31m# an exception raised, because after del tup tuple does not exist anymore\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m: name 'tup' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup=(1,2,3,4,5)\n",
+        "\n",
+        "list1=list(tup)\n",
+        "list1[4]=6\n",
+        "\n",
+        "tup=tuple(list1)\n",
+        "tup\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3lRaNvwRlOeO",
+        "outputId": "48cec7a6-4692-4c52-a495-e0c995dccc81"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 2, 3, 4, 6)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup=1,2,3 #packing\n",
+        "print(\"The type of \",tup,\"is:\",type(tup))\n",
+        "\n",
+        "a,b,c=tup #unpacking\n",
+        "print(a)\n",
+        "print(b)\n",
+        "print(c)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ct72aQ5xleRo",
+        "outputId": "f73eb29a-d80c-4255-f733-2070dd1623f1"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The type of  (1, 2, 3) is: <class 'tuple'>\n",
+            "1\n",
+            "2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\n",
+        "print (\"dict['Name']: \", dict['Name'])\n",
+        "print (\"dict['Age']: \", dict['Age'])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IQC_3IIPljS-",
+        "outputId": "10df9e89-f4ab-4450-bb8a-a3ff4a6da2fb"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "dict['Name']:  Zara\n",
+            "dict['Age']:  7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\n",
+        "dict['Age'] = 8; # update existing entry\n",
+        "dict['School'] = \"DPS School\"; # Add new entry\n",
+        "\n",
+        "print (\"dict['Age']: \", dict['Age'])\n",
+        "print (\"dict['School']: \", dict['School'])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8CiF1nMpmUIx",
+        "outputId": "59321d45-4275-4ba1-8166-61be27ed7ca7"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "dict['Age']:  8\n",
+            "dict['School']:  DPS School\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\n",
+        "del dict['Name']; # remove entry with key 'Name'\n",
+        "dict.clear();     # remove all entries in dict\n",
+        "del dict ;        # delete entire dictionary\n",
+        "\n",
+        "# an exception is raised here because after del dict dictionary does not exist any more :\n",
+        "print (\"dict['Age']: \", dict['Age'])\n",
+        "print (\"dict['School']: \", dict['School'])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4m83hDoxmZv4",
+        "outputId": "cd0a8b9b-e665-442e-e6d5-c2a6f2a5a50d"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "dict['Age']:  dict['Age']\n",
+            "dict['School']:  dict['School']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Days=set([\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\",\"Sun\"])\n",
+        "Months={\"Jan\",\"Feb\",\"Mar\"}\n",
+        "Dates={21,22,17}\n",
+        "print(Days)\n",
+        "print(Months)\n",
+        "print(Dates)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jsGnbzvemfLV",
+        "outputId": "541d88df-447b-4492-bcd7-d5bc9ff3c21d"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Sat', 'Mon', 'Tue', 'Thu', 'Fri', 'Wed', 'Sun'}\n",
+            "{'Mar', 'Jan', 'Feb'}\n",
+            "{17, 21, 22}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Days=set([\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\",\"Sun\"])\n",
+        "\n",
+        "for d in Days:\n",
+        "   print(d)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aU-Om1wImzy-",
+        "outputId": "091b8866-e869-49ad-f071-c77c922f53df"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sat\n",
+            "Mon\n",
+            "Tue\n",
+            "Thu\n",
+            "Fri\n",
+            "Wed\n",
+            "Sun\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "DaysA = set([\"Mon\",\"Tue\",\"Wed\"])\n",
+        "DaysB = set([\"Wed\",\"Thu\",\"Fri\",\"Sat\",\"Sun\"])\n",
+        "print(DaysA|DaysB)\t\t# equals with print(DaysA.union(DaysB))\n",
+        "print(DaysA & DaysB)\t# equals with print(DaysA.intersection(DaysB))\n",
+        "print(DaysA - DaysB)\t\t# equals with print(DaysA.difference(DaysB))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3gdqBcxIm3Hx",
+        "outputId": "0b47d578-cb05-4859-cc6b-fff34ad2681f"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Sat', 'Mon', 'Tue', 'Thu', 'Fri', 'Wed', 'Sun'}\n",
+            "{'Wed'}\n",
+            "{'Mon', 'Tue'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "employee_list = [(12345, \"John\", \"Kitchen\"), (12458, \"Paul\", \"House Floor\")]\n",
+        "\n",
+        "def get_employee(id):\n",
+        "    for employee in employee_list:\n",
+        "        if employee[0] == id:\n",
+        "            return {\"id\": employee[0], \"name\": employee[1], \"department\": employee[2]}\n",
+        "\n",
+        "print(get_employee(12458))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rG1p2ZsUm6cQ",
+        "outputId": "1295e4be-0d11-41de-ec0a-08e611bad346"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'id': 12458, 'name': 'Paul', 'department': 'House Floor'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "employee_dict = {\n",
+        "    12345: {\n",
+        "        \"id\": \"12345\",\n",
+        "        \"name\": \"John\",\n",
+        "        \"department\": \"Kitchen\"\n",
+        "    },\n",
+        "    12458: {\n",
+        "        \"id\": \"12458\",\n",
+        "        \"name\": \"Paul\",\n",
+        "        \"department\": \"House Floor\"\n",
+        "    }\n",
+        "}\n",
+        "\n",
+        "def get_employee_from_dict(id):\n",
+        "    return employee_dict[id];\n",
+        "\n",
+        "\n",
+        "print(get_employee_from_dict(12458));\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7sPWUne2m92F",
+        "outputId": "500aae96-193e-4dab-aef7-c8a5a799d465"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'id': '12458', 'name': 'Paul', 'department': 'House Floor'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "zrusQW_TnCpo"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
