@@ -1,0 +1,369 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2EPxlthQFPce",
+        "outputId": "7b95a43b-74b0-494a-8c74-a65ca402f980"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the temperature in degree Fahrenheit: 200\n",
+            "It is above freezing\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "def convert_to_celsius(fahrenheit: float) -> float:\n",
+        "    \"\"\"Return the number of Celsius degrees equivalent to fahrenheit\n",
+        "    degrees.\n",
+        "\n",
+        "    >>> convert_to_celsius(75)\n",
+        "    23.88888888888889\n",
+        "    \"\"\"\n",
+        "    return (fahrenheit - 32.0) * 5.0 / 9.0\n",
+        "\n",
+        "def above_freezing(celsius: float) -> bool:\n",
+        "    \"\"\"Return True if temperature celsius degrees is above freezing.\n",
+        "    above_freezing(5.2)\n",
+        "    True\n",
+        "    above_freezing(-2)\n",
+        "    False\n",
+        "    \"\"\"\n",
+        "    return celsius > 0\n",
+        "\n",
+        "fahrenheit = float(input('Enter the temperature in degree Fahrenheit: '))\n",
+        "celcius = convert_to_celsius(fahrenheit)\n",
+        "if (above_freezing(celcius)):\n",
+        "    print('It is above freezing')\n",
+        "else:\n",
+        "    print('It is below freezing')\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import temperature_program\n",
+        "\n",
+        "def get_preheating_instructions(fahrenheit: float) -> str:\n",
+        "\n",
+        "    cels = str(temperature_program.convert_to_celsius(fahrenheit))\n",
+        "    fahr = str(fahrenheit)\n",
+        "    return f'Preheat oven to {fahr} degrees F ({cels} degrees C).'\n",
+        "\n",
+        "fahr = float(input('Enter the baking temperature in degree Fahrenheit: '))\n",
+        "print(get_preheating_instructions(fahr))\n",
+        "  print(\"It is below freezing\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 140
+        },
+        "id": "TB9ie537FjrQ",
+        "outputId": "1ecbd4b0-0dba-40f0-dbb6-760f45ee08c7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-8-098b7b157192>\"\u001b[0;36m, line \u001b[0;32m11\u001b[0m\n\u001b[0;31m    print(\"It is below freezing\")\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unexpected indent\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "def convert_to_celsius(fahrenheit: float) -> float:\n",
+        "    \"\"\"Return the number of Celsius degrees equivalent to fahrenheit\n",
+        "    degrees.\n",
+        "\n",
+        "    >>> convert_to_celsius(75)\n",
+        "    23.88888888888889\n",
+        "    \"\"\"\n",
+        "    return (fahrenheit - 32.0) * 5.0 / 9.0\n",
+        "\n",
+        "def above_freezing(celsius: float) -> bool:\n",
+        "    \"\"\"Return True if temperature celsius degrees is above freezing.\n",
+        "    above_freezing(5.2)\n",
+        "    True\n",
+        "    above_freezing(-2)\n",
+        "    False\n",
+        "    \"\"\"\n",
+        "    return celsius > 0\n",
+        "\n",
+        "if __name__ == '__main__':\n",
+        "    fahrenheit = float(input('Enter the temperature in degree Fahrenheit: '))\n",
+        "    celcius = convert_to_celsius(fahrenheit)\n",
+        "    if (above_freezing(celcius)):\n",
+        "        print('It is above freezing')\n",
+        "    else:\n",
+        "      print('its below freezing')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8Ve9oU-WFoF2",
+        "outputId": "3e9a008c-f6c5-45c8-c2ff-00d606f5edf6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the temperature in degree Fahrenheit: 234\n",
+            "It is above freezing\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math\n",
+        "math.pi = 3\n",
+        "radius = 5\n",
+        "print (\"area is\",math.pi * radius **2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tykVKPlyFx53",
+        "outputId": "62502adb-e7c8-458f-aabc-434d06dd560c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "area is 75\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "def main():\n",
+        "    rectangle_width = 4\n",
+        "    rectangle_height = 6\n",
+        "    rectangle_area_value = rectangle_area(rectangle_width, rectangle_height)\n",
+        "    print(f\"Area of rectangle with width {rectangle_width} and height {rectangle_height}: {rectangle_area_value}\")\n",
+        "\n",
+        "    square_side_length = 5\n",
+        "    square_area_value = square_area(square_side_length)\n",
+        "    print(f\"Area of square with side length {square_side_length}: {square_area_value}\")\n",
+        "\n",
+        "\n",
+        "if name == \"main\":\n",
+        "    main()\n",
+        "\n",
+        "def rectangle_area(width, height):\n",
+        "    return width * height\n",
+        "\n",
+        "def square_area(side_length):\n",
+        "    return side_length ** 2\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 245
+        },
+        "id": "Dd5GVnN2GI9Y",
+        "outputId": "11db621e-9225-4682-9fb3-9b466c4b9d44"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-19-9f009ad43db9>\u001b[0m in \u001b[0;36m<cell line: 12>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     10\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 12\u001b[0;31m \u001b[0;32mif\u001b[0m \u001b[0mname\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;34m\"main\"\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     13\u001b[0m     \u001b[0mmain\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     14\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'name' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "def main():\n",
+        "    rectangle_width = 4\n",
+        "    rectangle_height = 6\n",
+        "    rectangle = rectangle(rectangle_width, rectangle_height)\n",
+        "    rectangle_area_value = rectangle.area()\n",
+        "    print(f\"Area of rectangle with width {rectangle_width} and height {rectangle_height}: {rectangle_area_value}\")\n",
+        "\n",
+        "    square_side_length = 5\n",
+        "    square = Square(square_side_length)\n",
+        "    square_area_value = rectangle.area()\n",
+        "    print(f\"Area of square with side length:{square_side_length}: {square_area_value}\")\n",
+        "\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()\n",
+        "\n",
+        "class rectangle:\n",
+        "    def __init__(self, width, height):\n",
+        "        self._width = width\n",
+        "        self._height = height\n",
+        "\n",
+        "    def area(self):\n",
+        "        return self._width * self._height\n",
+        "\n",
+        "class square:\n",
+        "    def __init__(self, side_length):\n",
+        "        self._side_length = side_length\n",
+        "\n",
+        "    def area(self):\n",
+        "        return self._side_length ** 2\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 383
+        },
+        "id": "mxYu2TECGTCO",
+        "outputId": "97a6e466-e403-49ca-e635-43c698d47362"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "UnboundLocalError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mUnboundLocalError\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-27-2d5dd97df887>\u001b[0m in \u001b[0;36m<cell line: 14>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     13\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     14\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0m__name__\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;34m\"__main__\"\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 15\u001b[0;31m     \u001b[0mmain\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     16\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     17\u001b[0m \u001b[0;32mclass\u001b[0m \u001b[0mrectangle\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m<ipython-input-27-2d5dd97df887>\u001b[0m in \u001b[0;36mmain\u001b[0;34m()\u001b[0m\n\u001b[1;32m      2\u001b[0m     \u001b[0mrectangle_width\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m4\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m     \u001b[0mrectangle_height\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m6\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 4\u001b[0;31m     \u001b[0mrectangle\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mrectangle\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mrectangle_width\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mrectangle_height\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      5\u001b[0m     \u001b[0mrectangle_area_value\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mrectangle\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0marea\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"Area of rectangle with width {rectangle_width} and height {rectangle_height}: {rectangle_area_value}\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mUnboundLocalError\u001b[0m: local variable 'rectangle' referenced before assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "def greet():\n",
+        "    return \"Hello from module1!\"\n",
+        "\n",
+        "def farewell():\n",
+        "    return \"goodbye from module2!\"\n",
+        "\n",
+        "\n",
+        "from my_package import module1, module2\n",
+        "\n",
+        "print(module1.greet())\n",
+        "print(module2.farewell())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 383
+        },
+        "id": "E-7LVO02Gcr1",
+        "outputId": "2578f0a0-45b2-4c32-8ecf-37c13d366e03"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ModuleNotFoundError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-29-172427dead42>\u001b[0m in \u001b[0;36m<cell line: 8>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0mmy_package\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mmodule1\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmodule2\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      9\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     10\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmodule1\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mgreet\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m: No module named 'my_package'",
+            "",
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0;32m\nNOTE: If your import is failing due to a missing package, you can\nmanually install dependencies using either !pip or !apt.\n\nTo view examples of installing some common dependencies, click the\n\"Open Examples\" button below.\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n"
+          ],
+          "errorDetails": {
+            "actions": [
+              {
+                "action": "open_url",
+                "actionText": "Open Examples",
+                "url": "/notebooks/snippets/importing_libraries.ipynb"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def add(a, b):\n",
+        "    \"\"\"\n",
+        "    This function adds two numbers.\n",
+        "\n",
+        "    >>> add(2, 3)\n",
+        "    5\n",
+        "    >>> add(-1, 1)\n",
+        "    0\n",
+        "    \"\"\"\n",
+        "    return a + b\n",
+        "\n",
+        "# it will report if tests are failed when executed:\n",
+        "if __name__ == \"__main__\":\n",
+        "    import doctest\n",
+        "    doctest.testmod()\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "ytjy1L1rG4tM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "kNyKNBaKG-VN"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
